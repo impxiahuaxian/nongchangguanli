@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.farm.dao.PlantDao">
+    <resultMap id="BaseResultMap" type="com.farm.entity.Plant">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="fid" jdbcType="INTEGER" property="fid"/>
+        <result column="cname" jdbcType="VARCHAR" property="cname"/>
+        <result column="cprofit" jdbcType="REAL" property="cprofit"/>
+        <result column="quantity" jdbcType="INTEGER" property="quantity"/>
+        <result column="total" jdbcType="REAL" property="total"/>
+        <result column="time" jdbcType="INTEGER" property="time"/>
+        <result column="status" jdbcType="BIT" property="status"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+    id, fid, cname, cprofit, quantity, total, time, status
+  </sql>
+    <select id="selectByExample" parameterType="com.farm.entity.PlantExample" resultMap="BaseResultMap">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from plant
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from plant
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from plant
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <delete id="deleteByExample" parameterType="com.farm.entity.PlantExample">
+        delete from plant
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.farm.entity.Plant">
+    insert into plant (id, fid, cname,
+      cprofit, quantity, total,
+      time, status)
+    values (#{id,jdbcType=INTEGER}, #{fid,jdbcType=INTEGER}, #{cname,jdbcType=VARCHAR},
+      #{cprofit,jdbcType=REAL}, #{quantity,jdbcType=INTEGER}, #{total,jdbcType=REAL},
+      #{time,jdbcType=INTEGER}, #{status,jdbcType=BIT})
+  </insert>
+    <insert id="insertSelective" parameterType="com.farm.entity.Plant">
+        insert into plant
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="fid != null">
+                fid,
+            </if>
+            <if test="cname != null">
+                cname,
+            </if>
+            <if test="cprofit != null">
+                cprofit,
+            </if>
+            <if test="quantity != null">
+                quantity,
+            </if>
+            <if test="total != null">
+                total,
+            </if>
+            <if test="time != null">
+                time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="fid != null">
+                #{fid,jdbcType=INTEGER},
+            </if>
+            <if test="cname != null">
+                #{cname,jdbcType=VARCHAR},
+            </if>
+            <if test="cprofit != null">
+                #{cprofit,jdbcType=REAL},
+            </if>
+            <if test="quantity != null">
+                #{quantity,jdbcType=INTEGER},
+            </if>
+            <if test="total != null">
+                #{total,jdbcType=REAL},
+            </if>
+            <if test="time != null">
+                #{time,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=BIT},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.farm.entity.PlantExample" resultType="java.lang.Long">
+        select count(*) from plant
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update plant
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=INTEGER},
+            </if>
+            <if test="record.fid != null">
+                fid = #{record.fid,jdbcType=INTEGER},
+            </if>
+            <if test="record.cname != null">
+                cname = #{record.cname,jdbcType=VARCHAR},
+            </if>
+            <if test="record.cprofit != null">
+                cprofit = #{record.cprofit,jdbcType=REAL},
+            </if>
+            <if test="record.quantity != null">
+                quantity = #{record.quantity,jdbcType=INTEGER},
+            </if>
+            <if test="record.total != null">
+                total = #{record.total,jdbcType=REAL},
+            </if>
+            <if test="record.time != null">
+                time = #{record.time,jdbcType=INTEGER},
+            </if>
+            <if test="record.status != null">
+                status = #{record.status,jdbcType=BIT},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update plant
+        set id = #{record.id,jdbcType=INTEGER},
+        fid = #{record.fid,jdbcType=INTEGER},
+        cname = #{record.cname,jdbcType=VARCHAR},
+        cprofit = #{record.cprofit,jdbcType=REAL},
+        quantity = #{record.quantity,jdbcType=INTEGER},
+        total = #{record.total,jdbcType=REAL},
+        time = #{record.time,jdbcType=INTEGER},
+        status = #{record.status,jdbcType=BIT}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.farm.entity.Plant">
+        update plant
+        <set>
+            <if test="fid != null">
+                fid = #{fid,jdbcType=INTEGER},
+            </if>
+            <if test="cname != null">
+                cname = #{cname,jdbcType=VARCHAR},
+            </if>
+            <if test="cprofit != null">
+                cprofit = #{cprofit,jdbcType=REAL},
+            </if>
+            <if test="quantity != null">
+                quantity = #{quantity,jdbcType=INTEGER},
+            </if>
+            <if test="total != null">
+                total = #{total,jdbcType=REAL},
+            </if>
+            <if test="time != null">
+                time = #{time,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=BIT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.farm.entity.Plant">
+    update plant
+    set fid = #{fid,jdbcType=INTEGER},
+      cname = #{cname,jdbcType=VARCHAR},
+      cprofit = #{cprofit,jdbcType=REAL},
+      quantity = #{quantity,jdbcType=INTEGER},
+      total = #{total,jdbcType=REAL},
+      time = #{time,jdbcType=INTEGER},
+      status = #{status,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    <update id="synchronize" parameterType="map">
+        UPDATE plant INNER JOIN crops
+        SET cprofit=crops.`profit`,total=crops.`profit`*quantity,TIME=crops.`cropsTime`
+        WHERE cname=crops.`cropsName`;
+    </update>
+</mapper>

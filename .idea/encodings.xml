@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/controller/UserController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/dto/CheckResult.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/dto/UserSignInResult.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/dto/UserSignUpResult.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/enums/AccountStatusEnum.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/exception/DataExistException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/exception/DataInsertException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/exception/DataMatchException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/exception/SystemException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/service/UserService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/service/impl/UserServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/vo/UserSignInForm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/farm/vo/UserSignUpForm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/database.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/agro" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bg.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css.map" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css.map" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css.map" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/bootstrapValidator.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css/font.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/bradleyhanditcttbold.ttf" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff2" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/jquery-1.11.2.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/jquery-3.3.1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/jquery-3.3.1.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/npm.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/sign.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/lib" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/lib/bootstrap.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/lib/bootstrapValidator.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/lib/jquery-1.12.3.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/sign-in.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/sign-up.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/views/index.jsp" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
